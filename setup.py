@@ -1,20 +1,37 @@
-from setuptools import setup, find_packages
-
-
-with open('README.md') as f:
-    readme = f.read()
-
-with open('LICENSE') as f:
-    license = f.read()
+# coding=utf-8
+"""Python Arlo setup script."""
+from setuptools import setup
 
 setup(
     name='arlo',
-    version='0.0.1',
-    description='Python package for interacting with Netgear Arlo cameras via the apis that are consumed by their website.',
-    long_description=readme,
+    py_modules=['Arlo'],
+    version='1.0.0',
+    description='Python Arlo is a library written in Python 2.7/3x ' +
+                'which exposes the Netgear Arlo cameras via the apis that are consumed by their website.',
     author='Jeffrey D. Walter',
-    author_email='me@jeffreydwalter.com',
+    author_email='jeffreydwalter@gmail.com',
     url='https://github.com/jeffreydwalter/arlo',
-    license=license,
-    packages=find_packages(exclude=('tests', 'docs'))
+    license='Apache Software License',
+    include_package_data=True,
+    install_requires=['monotonic', 'requests', 'sseclient', 'PySocks'],
+    keywords=[
+        'arlo',
+        'camera',
+        'home automation',
+        'netgear',
+        'python',
+        ],
+    classifiers=[
+	'Development Status :: 5 - Production/Stable',
+        'Environment :: Other Environment',
+        'Intended Audience :: Developers',
+	'License :: OSI Approved :: Apache Software License',
+        'Operating System :: OS Independent',
+        'Programming Language :: Python',
+        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.6',
+        'Topic :: Software Development :: Libraries :: Python Modules'
+        ],
 )
